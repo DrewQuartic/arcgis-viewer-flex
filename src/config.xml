@@ -23,8 +23,10 @@
     <widget right="20" top="55"    config="widgets/MapSwitcher/MapSwitcherWidget.xml" url="widgets/MapSwitcher/MapSwitcherWidget.swf"/>
     <widget left="0"   top="0"     config="widgets/HeaderController/HeaderControllerWidget.xml" url="widgets/HeaderController/HeaderControllerWidget.swf"/>
 
-    <map wraparound180="true" initialextent="-14083000 3139000 -10879000 5458000" fullextent="-20000000 -20000000 20000000 20000000" top="40" addarcgisbasemaps="true">
+    <map wraparound180="true" addarcgisbasemaps="true">
         <operationallayers>
+            <layer label="DistrictsAndServices" type="dynamic" visible="true" alpha="1.0"
+                   url="http://coemapservices.encinitasca.gov/encgis/rest/services/Unsecured/MyEncinitas/MapServer"/>
             <layer label="Demographics" type="tiled" visible="false" alpha="0.5"
                    url="http://server.arcgisonline.com/ArcGIS/rest/services/Demographics/USA_Median_Household_Income/MapServer">
                 <sublayer id="1" popupconfig="popups/PopUp_Demographics_BlockGroups.xml"/>
@@ -35,12 +37,17 @@
             <layer label="Fires" type="feature" visible="false" alpha="1.0"
                    popupconfig="popups/PopUp_Fires.xml"
                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer/0"/>
+
         </operationallayers>
     </map>
 
     <!-- widgets organized into widget containers that manage close/open etc -->
     <!-- supported layout property options: horizontal(default)|float|vertical|fix-->
     <widgetcontainer layout="float">
+            <widget label="TOC"         left="430" top="90"
+                icon="assets/images/i_bookmark.png"
+                config="widgets/eLayerList/eLayerListWidget.xml"
+                url="widgets/eLayerList/eLayerListWidget.swf"/>
         <widget label="Bookmarks"         left="430" top="90"
                 icon="assets/images/i_bookmark.png"
                 config="widgets/Bookmark/BookmarkWidget.xml"

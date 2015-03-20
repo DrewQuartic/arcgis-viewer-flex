@@ -32,7 +32,7 @@
                    popupconfig="http://resources.arcgis.com/en/help/flex-viewer/live/popups/PopUp_311.xml"
                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/SanFrancisco/311Incidents/FeatureServer/0"/>
             <!-- Example time-aware feature layer -->
-            <layer label="Earthquakes" type="feature" visible="true"
+            <layer label="Earthquakes" type="feature" visible="false"
                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Earthquakes/Since_1970/MapServer/0"/>
             <!-- Example data used with data extract widget -->
             <layer label="Data Extract Incidents" type="dynamic" visible="false" alpha="0.6"
@@ -40,6 +40,9 @@
             <!-- Example for chart widget -->
             <layer label="USA Diversity Index" type="feature" visible="false"
                    url="http://server.arcgisonline.com/ArcGIS/rest/services/Demographics/USA_Diversity_Index/MapServer/4"/>
+            <layer label="DistrictsAndServices" type="feature" visible="true"
+                   url=" http://hyperion:6080/arcgis/rest/services/Unsecured/DistrictsAndServices/MapServer"/>
+                  
         </operationallayers>
     </map>
 
